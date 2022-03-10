@@ -29,3 +29,8 @@ td:hover {
 .result {
   height: 20%;
 }
+
+.msg {
+  text-align: center;
+  color: green;
+}

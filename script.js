@@ -19,7 +19,7 @@ const addOperator = (signe) => {
     num1 = false;
     updateDisplay(` ${operator} `);
   } else {
-    alert('Vous devez entrer un nombre')
+    setMsg('Vous devez entrer un nombre')
   }
 }
 
@@ -50,7 +50,7 @@ const calcul = () => {
         break;
     }
   } else {
-    alert("Vous devez entrer un deuxième nombre");
+    setMsg("Vous devez entrer un deuxième nombre");
   }
 }
 
@@ -67,4 +67,12 @@ const fullReset = () => {
   resetDisplay();
   updateDisplay("");
   resetValue();
+}
+
+const setMsg = (msg) => {
+  const msgHtml = document.getElementById('msg');
+  msgHtml.innerText = msg;
+  setTimeout(() => {
+    msgHtml.innerText = "";
+  }, 2500)
 }
